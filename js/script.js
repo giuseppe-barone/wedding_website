@@ -29,21 +29,22 @@ document.addEventListener('click', (e) => {
 // Imposta la data target (modifica questa data come preferisci)
 // Formato: Anno, Mese (0-11), Giorno, Ora, Minuti, Secondi
 const targetDate = new Date(2026, 6, 18, 15, 59, 59).getTime(); // 31 Dicembre 2025, 23:59:59
-
 // Elementi del countdown
 const daysElement = document.getElementById('days');
 const hoursElement = document.getElementById('hours');
 const minutesElement = document.getElementById('minutes');
+const secondsElement = document.getElementById('seconds');
 
 // Funzione per aggiornare il countdown
 function updateCountdown() {
     const now = new Date().getTime();
     const distance = targetDate - now;
 
-    // Calcola giorni, ore, minuti
+    // Calcola giorni, ore, minuti e secondi
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Aggiungi lo zero davanti se necessario
     const formatNumber = (num) => num < 10 ? '0' + num : num;
@@ -53,11 +54,13 @@ function updateCountdown() {
         daysElement.textContent = formatNumber(days);
         hoursElement.textContent = formatNumber(hours);
         minutesElement.textContent = formatNumber(minutes);
+        secondsElement.textContent = formatNumber(seconds);
     } else {
         // Countdown terminato
         daysElement.textContent = '00';
         hoursElement.textContent = '00';
         minutesElement.textContent = '00';
+        secondsElement.textContent = '00';
         clearInterval(countdownInterval);
     }
 }
