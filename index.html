@@ -4,171 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <!-- Logo/Icona Sinistra -->
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <!-- Menu Sinistra -->
+        <ul class="nav-menu nav-menu-left">
+            <li class="nav-item"><a href="#location" class="nav-link">Location</a></li>
+        </ul>
+
+        <!-- Gruppo Centrale: Nome + Logo + Nome -->
+        <div class="nav-center">
+            <span class="nav-name">Giuseppe</span>
             <div class="nav-logo">
                 <a href="#home">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="20" cy="20" r="18" stroke="#333" stroke-width="2"/>
-                        <path d="M20 10L20 30M10 20L30 20" stroke="#333" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
+                    <img src="images/logo.png" alt="Logo" width="90" height="90">
                 </a>
             </div>
-            
-            <!-- Menu Desktop -->
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#gallery" class="nav-link">Galleria</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contatti</a></li>
-            </ul>
-            
-            <!-- Burger Menu (Mobile) -->
-            <div class="burger-menu">
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-container">
-            <!-- Foto Sinistra -->
-            <div class="photo-side photo-left">
-                <img src="images/olga-solodilova-Idqe3vQ-8qo-unsplash.jpg" alt="Foto sinistra">
-            </div>
-            
-            <!-- Foto Centrale -->
-            <div class="photo-center">
-                <div class="date-overlay">18 · 06 · 2026 </div>
-                <img src="images/olga-solodilova-Ty1NNPJUsW8-unsplash.jpg" alt="Foto centrale">
-            </div>
-            
-            <!-- Foto Destra -->
-            <div class="photo-side photo-right">
-                <img src="images/olga-solodilova-LeQVHiw5nww-unsplash.jpg" alt="Foto destra">
-            </div>
+            <span class="nav-name">Daniela</span>
         </div>
 
-        <!-- Testo sotto la foto centrale -->
-        <div class="photo-description">
-            <p>UNISCITI A NOI PER INTRAPRENDERE UN VIAGGIO DI AMORE, GIOIA E FELICITÀ ETERNA.</p>
+        <!-- Menu Destra -->
+        <ul class="nav-menu nav-menu-right">
+            <li class="nav-item"><a href="#contact" class="nav-link">Contatti</a></li>
+        </ul>
+
+        <!-- Burger Menu (Mobile) -->
+        <div class="burger-menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-container">
+        <!-- Foto Sinistra -->
+        <div class="photo-side">
+            <img src="images/sguardo.jpg" alt="Foto sinistra">
         </div>
 
-        <!-- Foto laterali per mobile (sotto la foto centrale) -->
-        <div class="mobile-photos">
-            <div class="mobile-photo">
-                <img src="images/olga-solodilova-Idqe3vQ-8qo-unsplash.jpg" alt="Foto sinistra">            </div>
-            <div class="mobile-photo">
-                <img src="images/olga-solodilova-LeQVHiw5nww-unsplash.jpg" alt="Foto destra">
-            </div>
+        <!-- Foto Centrale -->
+        <div class="photo-wrapper">
+            <div class="overlay-text date-overlay">18 · 06 · 2026</div>
+            <img src="images/noi_center.jpg" alt="Foto centrale">
         </div>
-    </section>
-    <!-- Sezione Countdown -->
-    <section class="countdown-section">
-        <div class="countdown-container">
-            <h2>Save the Date</h2>
 
-            <div class="countdown-grid">
-                <div class="countdown-item">
-                    <div class="countdown-number" id="days">00</div>
-                    <div class="countdown-label">Giorni</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="hours">00</div>
-                    <div class="countdown-label">Ore</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="minutes">00</div>
-                    <div class="countdown-label">Minuti</div>
-                </div>
+        <!-- Foto Destra -->
+        <div class="photo-side">
+            <img src="images/elegance.jpg" alt="Foto destra">
+        </div>
+    </div>
+
+    <!-- Testo sotto la foto centrale -->
+    <div class="photo-description">
+        <p>UNISCITI A NOI PER INTRAPRENDERE UN VIAGGIO DI AMORE, GIOIA E FELICITÀ ETERNA.</p>
+    </div>
+
+    <!-- Foto laterali per mobile -->
+    <div class="mobile-photos">
+        <div class="mobile-photo">
+            <img src="images/sguardo.jpg" alt="Foto sinistra">
+        </div>
+        <div class="mobile-photo">
+            <img src="images/elegance.jpg" alt="Foto destra">
+        </div>
+    </div>
+</section>
+
+<!-- Sezione Countdown -->
+<section class="bg-section" style="background-image: url('images/img_1.png');">
+    <div class="container">
+        <h2 class="section-title">Save the Date</h2>
+
+        <div class="countdown-grid">
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">00</div>
+                <div class="countdown-label">Giorni</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">00</div>
+                <div class="countdown-label">Ore</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">00</div>
+                <div class="countdown-label">Minuti</div>
             </div>
         </div>
-    </section>
-    <!-- Sezione Finale con Due Elementi -->
-    <section class="final-section">
-        <div class="final-container">
-            <!-- Elemento Sinistro -->
-            <div class="final-item">
-                <div class="photo-center">
-                    <div class="text-overlay">Cerimonia</div>
-                    <img src="images/chiesa.jpeg" alt="Primo progetto">
+    </div>
+</section>
+
+<!-- Sezione Location -->
+<section class="section" id="location">
+    <div class="container">
+        <div class="location-grid">
+            <!-- Cerimonia -->
+            <div class="location-item">
+                <div class="photo-wrapper-location">
+                    <div class="overlay-text title-overlay">Cerimonia</div>
+                    <img src="images/chiesa.jpeg" alt="Chiesa">
                 </div>
-                <p class="final-text">
-                    <br>
-                    Chiesa Maria S.S. delle Grazie
-                    <br>
+                <p class="location-info">
+                    Chiesa Maria S.S. delle Grazie<br>
                     Sinopoli, RC
-                    <br>
-                <p class="final-hour">Ore 16:00 </p>
-
-                <a href="https://maps.app.goo.gl/irjKWhDx57zy6YPo8" target="_blank" class="final-button">Location</a>
+                </p>
+                <p class="location-time">Ore 16:00</p>
+                <a href="https://maps.app.goo.gl/irjKWhDx57zy6YPo8" target="_blank" class="btn btn-primary">Location</a>
             </div>
 
-            <!-- Elemento Destro -->
-            <div class="final-item">
-                <div class="photo-center">
-                    <div class="text-overlay">Ricevimento</div>
-                    <img src="images/villa-la-fenice-sala-ricevimenti-11.jpg" alt="Primo progetto">
+            <!-- Ricevimento -->
+            <div class="location-item">
+                <div class="photo-wrapper-location">
+                    <div class="overlay-text title-overlay">Ricevimento</div>
+                    <img src="images/villa-la-fenice-sala-ricevimenti-11.jpg" alt="Villa">
                 </div>
-                <p class="final-text">
-                    <br>
-                    Villa la Fenice
-                    <br>
+                <p class="location-info">
+                    Villa la Fenice<br>
                     Gallico, RC
-                    <br>
-                    <p class="final-hour">Ore 20:00 </p>
-
-                <a href="https://maps.app.goo.gl/wTwLmj8EUAQuYnB8A" target="_blank" class="final-button">Location</a>
+                </p>
+                <p class="location-time">Ore 20:00</p>
+                <a href="https://maps.app.goo.gl/wTwLmj8EUAQuYnB8A" target="_blank" class="btn btn-primary">Location</a>
             </div>
         </div>
-    </section>
-    <!-- Sezione con Background Sfocato -->
-    <section class="blur-section">
-        <div class="blur-container">
-            <h2>Partecipazione</h2>
-            <p class="blur-text">
-                Si gradisce la conferma di prenotazione che è possibile effettuare
-                compilando il form sottostante
+    </div>
+</section>
+
+<!-- Sezione Partecipazione -->
+<section class="bg-section" style="background-image: url('images/img.png');">
+    <div class="container">
+        <h2 class="section-title">Partecipazione</h2>
+        <p class="section-text">
+            Si gradisce la conferma di prenotazione che è possibile effettuare
+            compilando il form sottostante
+        </p>
+        <a href="#action" class="btn btn-light">Form</a>
+    </div>
+</section>
+
+<!-- Sezione Informazioni Utili -->
+<section class="section" id="contact">
+    <div class="container" style="margin-top: 2rem">
+        <div class="photo-wrapper" style="margin: 0 auto;">
+            <div class="overlay-text title-overlay">Aggiunta info utili</div>
+            <img src="images/karolina-grabowska-yH50AWO8ZRo-unsplash.jpg" alt="Informazioni utili">
+            <p class="location-info">
+                Aggiungere le varie informazioni utili tipo IBAN,
+                eventualmente contatti nostri ecc
             </p>
-            <a href="#action" class="blur-button">Form</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Sezione con Foto e Link Laterali -->
-    <section class="photo-links-section">
-        <div class="photo-links-container">
-            
-            <div class="photo-links-content">
-                <!-- Link Sinistro -->
-                <a href="#left" class="side-link left-link">
-                </a>
-
-                <!-- Foto Centrale -->
-                <div class="photo-center">
-                    <div class="text-overlay">Aggiunta IBAN</div>
-                    <img src="" alt="Immagine centrale">
-                </div>
-
-                <!-- Link Destro -->
-                <a href="#right" class="side-link right-link">
-                </a>
-            </div>
-
-            <!-- Link Mobile (sotto la foto) -->
-            <div class="mobile-links">
-                <a href="#left" class="mobile-link">← Progetto Precedente</a>
-                <a href="#right" class="mobile-link">Progetto Successivo →</a>
-            </div>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
