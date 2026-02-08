@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo/Icona Sinistra -->
+            <div class="nav-logo">
+                <a href="#home">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="#333" stroke-width="2"/>
+                        <path d="M20 10L20 30M10 20L30 20" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <!-- Menu Desktop -->
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#gallery" class="nav-link">Galleria</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contatti</a></li>
+            </ul>
+            
+            <!-- Burger Menu (Mobile) -->
+            <div class="burger-menu">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <!-- Foto Sinistra -->
+            <div class="photo-side photo-left">
+                <img src="images/olga-solodilova-Idqe3vQ-8qo-unsplash.jpg" alt="Foto sinistra">
+            </div>
+            
+            <!-- Foto Centrale -->
+            <div class="photo-center">
+                <div class="date-overlay">18 · 06 · 2026 </div>
+                <img src="images/olga-solodilova-Ty1NNPJUsW8-unsplash.jpg" alt="Foto centrale">
+            </div>
+            
+            <!-- Foto Destra -->
+            <div class="photo-side photo-right">
+                <img src="images/olga-solodilova-LeQVHiw5nww-unsplash.jpg" alt="Foto destra">
+            </div>
+        </div>
+
+        <!-- Testo sotto la foto centrale -->
+        <div class="photo-description">
+            <p>UNISCITI A NOI PER INTRAPRENDERE UN VIAGGIO DI AMORE, GIOIA E FELICITÀ ETERNA.</p>
+        </div>
+
+        <!-- Foto laterali per mobile (sotto la foto centrale) -->
+        <div class="mobile-photos">
+            <div class="mobile-photo">
+                <img src="images/olga-solodilova-Idqe3vQ-8qo-unsplash.jpg" alt="Foto sinistra">            </div>
+            <div class="mobile-photo">
+                <img src="images/olga-solodilova-LeQVHiw5nww-unsplash.jpg" alt="Foto destra">
+            </div>
+        </div>
+    </section>
+    <!-- Sezione Countdown -->
+    <section class="countdown-section">
+        <div class="countdown-container">
+            <h2>Save the Date</h2>
+
+            <div class="countdown-grid">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Giorni</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Ore</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Minuti</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sezione Finale con Due Elementi -->
+    <section class="final-section">
+        <div class="final-container">
+            <!-- Elemento Sinistro -->
+            <div class="final-item">
+                <div class="photo-center">
+                    <div class="text-overlay">Cerimonia</div>
+                    <img src="images/chiesa.jpeg" alt="Primo progetto">
+                </div>
+                <p class="final-text">
+                    <br>
+                    Chiesa Maria S.S. delle Grazie
+                    <br>
+                    Sinopoli, RC
+                    <br>
+                <p class="final-hour">Ore 16:00 </p>
+
+                <a href="https://maps.app.goo.gl/irjKWhDx57zy6YPo8" target="_blank" class="final-button">Location</a>
+            </div>
+
+            <!-- Elemento Destro -->
+            <div class="final-item">
+                <div class="photo-center">
+                    <div class="text-overlay">Ricevimento</div>
+                    <img src="images/villa-la-fenice-sala-ricevimenti-11.jpg" alt="Primo progetto">
+                </div>
+                <p class="final-text">
+                    <br>
+                    Villa la Fenice
+                    <br>
+                    Gallico, RC
+                    <br>
+                    <p class="final-hour">Ore 20:00 </p>
+
+                <a href="https://maps.app.goo.gl/wTwLmj8EUAQuYnB8A" target="_blank" class="final-button">Location</a>
+            </div>
+        </div>
+    </section>
+    <!-- Sezione con Background Sfocato -->
+    <section class="blur-section">
+        <div class="blur-container">
+            <h2>Partecipazione</h2>
+            <p class="blur-text">
+                Si gradisce la conferma di prenotazione che è possibile effettuare
+                compilando il form sottostante
+            </p>
+            <a href="#action" class="blur-button">Form</a>
+        </div>
+    </section>
+
+    <!-- Sezione con Foto e Link Laterali -->
+    <section class="photo-links-section">
+        <div class="photo-links-container">
+            
+            <div class="photo-links-content">
+                <!-- Link Sinistro -->
+                <a href="#left" class="side-link left-link">
+                </a>
+
+                <!-- Foto Centrale -->
+                <div class="photo-center">
+                    <div class="text-overlay">Aggiunta IBAN</div>
+                    <img src="" alt="Immagine centrale">
+                </div>
+
+                <!-- Link Destro -->
+                <a href="#right" class="side-link right-link">
+                </a>
+            </div>
+
+            <!-- Link Mobile (sotto la foto) -->
+            <div class="mobile-links">
+                <a href="#left" class="mobile-link">← Progetto Precedente</a>
+                <a href="#right" class="mobile-link">Progetto Successivo →</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
