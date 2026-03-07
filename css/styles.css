@@ -9,6 +9,10 @@ body {
     background-color: #ffffff;
 }
 
+html {
+    overflow-x: clip;
+}
+
 /* CLASSI COMUNI */
 .container {
     max-width: 1200px;
@@ -137,11 +141,13 @@ body {
 .nav-menu-left {
     justify-content: flex-start;
     font-size: 1rem;
+    text-transform: uppercase;
 }
 
 .nav-menu-right {
     justify-content: flex-end;
     font-size: 1rem;
+    text-transform: uppercase;
 }
 
 .nav-item {
@@ -177,6 +183,11 @@ body {
 
 /* NAVBAR - RESPONSIVE */
 @media screen and (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
     .nav-container {
         justify-content: center;
     }
@@ -240,6 +251,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 3rem 2rem;
+    contain: paint;
 }
 
 .hero-container {
@@ -342,7 +354,15 @@ body {
     }
 
     .date-overlay {
-        font-size: 10rem;
+        font-size: 5rem;
+    }
+
+    .title-overlay {
+        font-size: 2.5rem;
+        top: -30px;
+        white-space: normal;
+        text-align: center;
+        width: 100%;
     }
 
     .mobile-photos {
@@ -377,6 +397,11 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
     .photo-wrapper {
         max-width: 250px;
         height: 400px;
@@ -391,8 +416,7 @@ body {
     }
 
     .date-overlay {
-        font-size: 1rem;
-        top: -18px;
+        font-size: 3rem;
         top: -18px;
     }
 
@@ -413,6 +437,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: local;
+    contain: paint;
 }
 
 .bg-section::before {
