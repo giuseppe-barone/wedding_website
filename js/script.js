@@ -1,27 +1,25 @@
 // Gestione Burger Menu
 const burgerMenu = document.querySelector('.burger-menu');
-const navMenu = document.querySelector('.nav-menu');
-const navLinks = document.querySelectorAll('.nav-link');
+const navOverlay = document.getElementById('navOverlay');
+const navLinks = document.querySelectorAll('.nav-overlay-menu .nav-link');
 
-// Toggle menu al click del burger
+function closeOverlay() {
+    burgerMenu.classList.remove('active');
+    navOverlay.classList.remove('active');
+}
+
 burgerMenu.addEventListener('click', () => {
     burgerMenu.classList.toggle('active');
-    navMenu.classList.toggle('active');
+    navOverlay.classList.toggle('active');
 });
 
-// Chiudi menu quando si clicca su un link
 navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        burgerMenu.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
+    link.addEventListener('click', closeOverlay);
 });
 
-// Chiudi menu quando si clicca fuori
 document.addEventListener('click', (e) => {
-    if (!burgerMenu.contains(e.target) && !navMenu.contains(e.target)) {
-        burgerMenu.classList.remove('active');
-        navMenu.classList.remove('active');
+    if (!burgerMenu.contains(e.target) && !navOverlay.contains(e.target)) {
+        closeOverlay();
     }
 });
 

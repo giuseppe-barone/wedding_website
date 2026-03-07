@@ -111,6 +111,7 @@ html {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    z-index: 1000;
 }
 
 .nav-logo a {
@@ -171,6 +172,7 @@ html {
     cursor: pointer;
     position: absolute;
     right: 2rem;
+    z-index: 1001;
 }
 
 .burger-line {
@@ -231,15 +233,81 @@ html {
 
     .burger-menu.active .burger-line:nth-child(1) {
         transform: rotate(-45deg) translate(-5px, 6px);
+        transition: transform 0.4s ease;
     }
 
     .burger-menu.active .burger-line:nth-child(2) {
         opacity: 0;
+        transition: opacity 0.2s ease;
     }
 
     .burger-menu.active .burger-line:nth-child(3) {
         transform: rotate(45deg) translate(-5px, -6px);
+        transition: transform 0.4s ease;
     }
+}
+
+/* NAV OVERLAY MOBILE */
+.nav-overlay {
+    display: flex;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.nav-overlay.active {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.nav-overlay-menu {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.nav-overlay-menu li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.nav-overlay.active .nav-overlay-menu li:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.15s; }
+.nav-overlay.active .nav-overlay-menu li:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.25s; }
+.nav-overlay.active .nav-overlay-menu li:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.35s; }
+.nav-overlay.active .nav-overlay-menu li:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.45s; }
+
+.nav-overlay-menu .nav-link {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.nav-overlay-menu .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+.nav-overlay-menu .nav-link:hover::after {
+    width: 100%;
 }
 
 /* HERO SECTION */
@@ -341,6 +409,7 @@ html {
     .hero-container {
         flex-direction: column;
         gap: 0;
+        margin-top: -1.5rem;
     }
 
     .photo-side {
