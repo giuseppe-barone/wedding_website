@@ -1,0 +1,12 @@
+----MOBILE
+1) scritte testuali piccole con il font di "ore, giorni" nel save the date
+2) data nel hero section più grande
+3) meno margine bianco nel hero section
+4) foto cerimonia e ricevimento più piccole, con il testo (sans serif) che sborda
+5) caption delle foto sans-serif
+6) più spazio tra tasto location e testo ricevimento
+
+
+----FONTS
+- Testi grandi, numeri, nomi, grassetti con il font di cerimonie/ricevimento/data
+- Testi piccoli, non grassetti, font Arial (quello attualmente nella navbar)

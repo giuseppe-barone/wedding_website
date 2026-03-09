@@ -97,7 +97,7 @@ html {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -129,7 +129,7 @@ html {
     text-transform: uppercase;
     font-weight: bold;
     color: #333;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, sans-serif;
 }
 
 .nav-menu {
@@ -143,12 +143,14 @@ html {
     justify-content: flex-start;
     font-size: 1rem;
     text-transform: uppercase;
+    font-family: Arial, sans-serif;
 }
 
 .nav-menu-right {
     justify-content: flex-end;
     font-size: 1rem;
     text-transform: uppercase;
+    font-family: Arial, sans-serif;
 }
 
 .nav-item {
@@ -312,7 +314,6 @@ html {
 
 /* HERO SECTION */
 .hero {
-    margin-top: 150px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -394,22 +395,20 @@ html {
 }
 
 .photo-description p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.6;
     color: #333;
-    font-family: Times SansSerif, serif;
+    font-family: Arial, sans-serif;
 }
 
 /* HERO - RESPONSIVE */
 @media screen and (max-width: 768px) {
     .hero {
-        padding: 2rem 1rem;
+        padding: 0rem 0rem;
     }
 
     .hero-container {
         flex-direction: column;
-        gap: 0;
-        margin-top: -1.5rem;
     }
 
     .photo-side {
@@ -485,7 +484,7 @@ html {
     }
 
     .date-overlay {
-        font-size: 3rem;
+        font-size: 3.5rem;
         top: -18px;
     }
 
