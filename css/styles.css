@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family:"silk-semi";
+    src:url("../fonts/Silk_Serif_SemiBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family:"silk-reg";
+    src:url("../fonts/Silk_Serif_Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family:"silk-lig";
+    src:url("../fonts/Silk_Serif_Light.otf") format("opentype");
+}
+
 body {
     font-family: 'Times New Roman', Times, serif;
     background-color: #ffffff;
@@ -20,7 +35,7 @@ html {
 }
 
 .section {
-    padding: 4.5rem 2rem;
+    padding: 6.5rem 2rem;
     width: 100%;
 }
 
@@ -42,7 +57,6 @@ html {
     font-weight: bold;
     border-radius: 8px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary {
@@ -53,7 +67,6 @@ html {
 .btn-primary:hover {
     background-color: #555;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .btn-light {
@@ -77,13 +90,18 @@ html {
     transform: translateX(-50%);
     background-color: transparent;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: silk-semi, sans-serif !important;
     font-weight: normal;
     color: #333;
     z-index: 10;
     white-space: nowrap;
 }
-
+.date-overlay {
+    top: 25px;
+    font-size: 8rem;
+    font-weight: normal;
+    font-family: 'silk-reg', serif !important;
+}
 /* NAVBAR */
 .navbar {
     position: relative;
@@ -205,7 +223,6 @@ html {
         width: 100%;
         text-align: center;
         transition: right 0.3s ease;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
         padding: 2rem 0;
         gap: 1.5rem;
     }
@@ -314,6 +331,7 @@ html {
 
 /* HERO SECTION */
 .hero {
+    border-top: 4rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -338,34 +356,37 @@ html {
     height: 600px;
 }
 
+.photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .photo-wrapper-location {
     position: relative;
-    width: 320px;
-    height: 500px;
+    width: 316px;
+    height: 475px;
 }
 
 .photo-wrapper-location img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.photo-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.date-overlay {
-    top: 25px;
-    font-size: 8rem;
+.location-info {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #555;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: Times SansSerif, serif;
 }
 
 .title-overlay {
-    top: -50px;
+    top: -67px;
     font-size: 4.5rem;
+    font-family: 'silk-lig', serif !important;
     text-transform: uppercase;
     color: #000000;
 }
@@ -379,7 +400,6 @@ html {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .mobile-photos {
@@ -387,24 +407,26 @@ html {
 }
 
 .photo-description {
-    max-width: 500px;
+    max-width: 730px;
     text-align: center;
     margin-top: 2rem;
     padding: 0 1rem;
-    font-size: 2rem;
 }
 
-.photo-description p {
+.photo-description h4 {
     font-size: 0.9rem;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.5rem;
     line-height: 1.6;
     color: #333;
-    font-family: Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* HERO - RESPONSIVE */
 @media screen and (max-width: 768px) {
     .hero {
-        padding: 0rem 0rem;
+        padding: 6rem 0rem;
     }
 
     .hero-container {
@@ -423,14 +445,16 @@ html {
 
     .date-overlay {
         font-size: 5rem;
+        font-weight: normal;
     }
 
     .title-overlay {
         font-size: 2.5rem;
-        top: -30px;
+        letter-spacing: 0.3rem;
+        font-family: 'silk-reg', serif !important;
+        top: -37px;
         white-space: normal;
         text-align: center;
-        width: 100%;
     }
 
     .mobile-photos {
@@ -451,18 +475,25 @@ html {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     }
-
+    .photo-wrapper-location {
+        position: relative;
+        width: 257px;
+        height: 374px;
+    }
     .photo-description {
         max-width: 350px;
         margin-top: 1.5rem;
     }
 
-    .photo-description p {
+    .photo-description h4 {
         font-size: 1rem;
+        font-style: normal;
+        letter-spacing: 0.5rem;
+        font-family: Helvetica, Arial, sans-serif;
     }
 }
+
 
 @media screen and (max-width: 480px) {
     .section-title {
@@ -486,14 +517,24 @@ html {
     .date-overlay {
         font-size: 3.5rem;
         top: -18px;
+        font-weight: normal;
+
     }
 
     .photo-description {
         max-width: 300px;
     }
 
-    .photo-description p {
-        font-size: 0.95rem;
+    .photo-description h4 {
+        font-size: 0.87rem;
+        font-style: normal;
+        letter-spacing: 0.3rem;
+        font-family: Helvetica Neue, Arial, sans-serif;
+    }
+    .photo-wrapper-location {
+        position: relative;
+        width: 257px;
+        height: 374px;
     }
 }
 
@@ -501,7 +542,7 @@ html {
 .bg-section {
     position: relative;
     width: 100%;
-    padding: 9rem 2rem;
+    padding: 12rem 2rem;
     background-size: cover;
     background-position: center;
     background-attachment: local;
@@ -651,9 +692,10 @@ html {
 }
 
 .location-info {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     color: #555;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     font-family: Times SansSerif, serif;
 }
@@ -670,12 +712,16 @@ html {
 @media screen and (max-width: 768px) {
     .location-grid {
         flex-direction: column;
-        gap: 3rem;
+        gap: 10rem;
     }
 
-    .location-info,
-    .location-time {
-        font-size: 1.5rem;
+    .location-info {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        color: #555;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-family: Times SansSerif, serif;
     }
 
     .btn {
@@ -688,5 +734,13 @@ html {
     .btn {
         padding: 0.8rem 1.8rem;
         font-size: 0.95rem;
+    }
+    .location-info {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        color: #555;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-family: Times SansSerif, serif;
     }
 }
