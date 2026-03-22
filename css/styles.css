@@ -426,7 +426,7 @@ html {
 /* HERO - RESPONSIVE */
 @media screen and (max-width: 768px) {
     .hero {
-        padding: 6rem 0rem;
+        padding: 5rem 0rem;
     }
 
     .hero-container {
@@ -516,7 +516,7 @@ html {
 
     .date-overlay {
         font-size: 3.5rem;
-        top: -18px;
+        top: -2.5rem;
         font-weight: normal;
 
     }
@@ -526,9 +526,9 @@ html {
     }
 
     .photo-description h4 {
-        font-size: 0.87rem;
+        font-size: 0.7rem;
         font-style: normal;
-        letter-spacing: 0.3rem;
+        letter-spacing: 0.1rem;
         font-family: Helvetica Neue, Arial, sans-serif;
     }
     .photo-wrapper-location {
