@@ -26,7 +26,7 @@ document.addEventListener('click', (e) => {
 // ===== COUNTDOWN =====
 // Imposta la data target (modifica questa data come preferisci)
 // Formato: Anno, Mese (0-11), Giorno, Ora, Minuti, Secondi
-const targetDate = new Date(2026, 6, 18, 15, 59, 59).getTime(); // 31 Dicembre 2025, 23:59:59
+const targetDate = new Date(2026, 5, 18, 15, 59, 59).getTime(); // 31 Dicembre 2025, 23:59:59
 // Elementi del countdown
 const daysElement = document.getElementById('days');
 const hoursElement = document.getElementById('hours');
@@ -68,3 +68,11 @@ updateCountdown();
 
 // Aggiorna il countdown ogni secondo
 const countdownInterval = setInterval(updateCountdown, 1000);
+
+// nel .js, senza il wrapper DOMContentLoaded
+const video = document.querySelector("video");
+if (video) {
+    video.play().catch(function (error) {
+        console.log("Autoplay bloccato:", error);
+    });
+}
