@@ -306,6 +306,7 @@ html {
 .nav-overlay.active .nav-overlay-menu li:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.25s; }
 .nav-overlay.active .nav-overlay-menu li:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.35s; }
 .nav-overlay.active .nav-overlay-menu li:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.45s; }
+.nav-overlay.active .nav-overlay-menu li:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.55s; }
 
 .nav-overlay-menu .nav-link {
     font-size: 1.5rem;
