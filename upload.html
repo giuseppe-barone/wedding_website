@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condividi le tue foto</title>
+    <link rel="stylesheet" href="css/upload.css">
+</head>
+<body>
+
+<header>
+    <h1>Condividi le tue foto</h1>
+    <div class="divider"></div>
+    <p>Carica i tuoi scatti e diventa parte del ricordo</p>
+</header>
+
+<div class="card">
+    <label for="ospite">Il tuo nome</label>
+    <input type="text" id="ospite" placeholder="es. Mario Rossi" />
+
+    <label>Le tue foto</label>
+    <div class="drop-area" id="dropArea">
+        <input type="file" id="fileInput" accept="image/*,video/*" multiple />
+        <span class="drop-icon">&#x1F4F7;</span>
+        <p class="drop-text">Trascina qui le foto oppure clicca per sceglierle</p>
+        <p class="drop-hint">JPG, PNG, HEIC, MP4 &mdash; qualità originale</p>
+    </div>
+
+    <div class="preview-grid" id="previewGrid"></div>
+
+    <button id="uploadBtn" disabled>Carica le foto</button>
+
+    <div class="progress-wrap" id="progressWrap">
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progressFill"></div>
+        </div>
+        <p class="progress-label" id="progressLabel">Caricamento in corso...</p>
+    </div>
+
+    <div class="msg" id="msg"></div>
+</div>
+
+<footer>
+    Le foto vengono salvate in modo privato &bull; Nessuna app richiesta
+</footer>
+
+<script src="js/upload.js"></script>
+
+</body>
+</html>
