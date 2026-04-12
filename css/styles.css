@@ -97,7 +97,7 @@ html {
     white-space: nowrap;
 }
 .date-overlay {
-    top: -1rem;
+    top: 1.5rem;
     font-size: 8rem;
     font-weight: normal;
     font-family: 'silk-reg', serif !important;
@@ -147,7 +147,7 @@ html {
     text-transform: uppercase;
     font-weight: bold;
     color: #333;
-    font-family: Arial, sans-serif;
+    font-family: silk-semi, sans-serif !important;
 }
 
 .nav-menu {
@@ -178,7 +178,7 @@ html {
 .nav-link {
     text-decoration: none;
     color: #333;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     transition: color 0.3s ease;
 }
 
