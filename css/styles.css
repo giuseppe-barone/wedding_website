@@ -726,7 +726,7 @@ html {
 }
 
 .location-info {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.5;
     color: #555;
     margin-top: 1rem;
@@ -737,7 +737,7 @@ html {
 
 .location-time {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     color: #555;
     margin-bottom: 2rem;
     font-family: Times SansSerif, serif;
