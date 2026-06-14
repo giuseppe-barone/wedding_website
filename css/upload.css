@@ -215,3 +215,81 @@ footer {
     letter-spacing: 0.08em;
     text-align: center;
 }
+
+/* TOP LOGO - upload.html */
+.top-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0 0.5rem;
+}
+
+.top-logo-img {
+    height: 70px;
+    width: auto;
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .top-logo-img {
+        height: 50px;
+    }
+}
+
+/* Smartphone */
+@media screen and (max-width: 480px) {
+    .top-logo-img {
+        height: 38px;
+    }
+}
+
+/* Smartphone piccoli */
+@media screen and (max-width: 390px) {
+    .top-logo-img {
+        height: 30px;
+    }
+}
+/* RESPONSIVE - riduzione margini mobile */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 30px 16px 30px;
+    }
+
+    header {
+        margin-bottom: 32px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        padding: 24px 20px;
+    }
+
+    footer {
+        margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 16px 12px 20px;
+    }
+
+    header {
+        margin-bottom: 24px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 20px 16px;
+    }
+
+    footer {
+        margin-top: 24px;
+    }
+}
